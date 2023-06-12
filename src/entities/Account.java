@@ -43,8 +43,15 @@ public class Account {
 	}
 	
 	public void withDraw(double amount) {
-		 accountBalance -= amount;
+		 accountBalance -= amount + drawRate;
 	}
 
-	
+	public String toString() {
+		return "Account "
+				+ accountNumber
+				+ ", Holder: "
+				+ accountHolder
+				+ ", Balance: $ "
+				+ String.format("%.2f", accountBalance);
+	}
 }

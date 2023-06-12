@@ -34,6 +34,23 @@ public class App {
 			account = new Account(accountNumber, accountHolder);
 		}
 		
+		System.out.println();
+		System.out.println("Account data:");
+		System.out.println(account);
+		
+		System.out.println();
+		System.out.print("Enter a deposity value: $ ");
+		double deposityValue = sc.nextDouble();
+		account.doDeposit(deposityValue);
+		System.out.println("Updated account data:");
+		System.out.println(account);
+		
+		System.out.println();
+		System.out.print("Enter a withdraw value: $ ");
+		double withdrawValue = sc.nextDouble();
+		account.withDraw(withdrawValue);
+		System.out.println("Updated account data: ");
+		System.out.println(account);
 		
 		sc.close();
 
